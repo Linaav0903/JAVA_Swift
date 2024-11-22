@@ -1,0 +1,23 @@
+//Programa que suma los números pares comprendidos entre n1 y n2.
+
+import Foundation
+
+print("Ingrese el valor inicial (n1): ", terminator: "")
+if let n1 = Int(readLine() ?? "") {
+    print("Ingrese el valor final (n2): ", terminator: "")
+    if let n2 = Int(readLine() ?? "") {
+        var suma = 0
+
+        for i in n1...n2 {
+            if i % 2 == 0 {
+                suma += i
+            }
+        }
+
+        print("La suma de los números pares es: \(suma)")
+    } else {
+        print("Entrada inválida para n2.")
+    }
+} else {
+    print("Entrada inválida para n1.")
+}
