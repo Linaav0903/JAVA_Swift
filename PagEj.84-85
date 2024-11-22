@@ -1,0 +1,69 @@
+class Circulo {
+    static let PI: Float = 3.14159
+    private var radio: Float = 0.0
+
+    func getRadio() -> Float {
+        return radio
+    }
+
+    func setRadio(_ radio: Float) {
+        self.radio = radio
+    }
+
+    func perimetro() -> Float {
+        return 2 * Circulo.PI * radio
+    }
+
+    func area() -> Float {
+        return Circulo.PI * radio * radio
+    }
+
+    func toString() -> String {
+        return "Círculo [radio=\(radio)]"
+    }
+}
+
+let circulo = Circulo()
+circulo.setRadio(7.2)
+print("El área es \(circulo.area())")
+
+
+
+//Dado el radio por el usuario
+import Foundation
+
+class Circulo {
+    static let PI: Float = 3.14159
+    private var radio: Float = 0.0
+
+    func getRadio() -> Float {
+        return radio
+    }
+
+    func setRadio(_ radio: Float) {
+        self.radio = radio
+    }
+
+    func perimetro() -> Float {
+        return 2 * Circulo.PI * radio
+    }
+
+    func area() -> Float {
+        return Circulo.PI * radio * radio
+    }
+
+    func toString() -> String {
+        return "Círculo [radio=\(radio)]"
+    }
+}
+
+let circulo = Circulo()
+
+print("Por favor, ingrese el radio del círculo: ", terminator: "")
+if let input = readLine(), let radio = Float(input) {
+    circulo.setRadio(radio)
+    print("El área del círculo es: \(circulo.area())")
+    print("El perímetro del círculo es: \(circulo.perimetro())")
+} else {
+    print("Entrada no válida. Por favor ingrese un número.")
+}
