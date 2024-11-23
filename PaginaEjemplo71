@@ -3,23 +3,19 @@ class Triangulo {
     var base: Float = 0.0
     var altura: Float = 0.0
 
-    // Método área sin parámetros
     func area() -> Float {
         return (base * altura) / 2.0
     }
 
-    // Método área con parámetros de tipo Float
     func area(base: Float, altura: Float) -> Float {
         return (base * altura) / 2.0
     }
 
-    // Método área con parámetros de tipo Int
     func area(base: Int, altura: Int) -> Float {
         return Float(base * altura) / 2.0
     }
 }
 
-// Prueba del Triángulo
 let triangulo = Triangulo()
 triangulo.base = 5
 triangulo.altura = 8
@@ -27,7 +23,6 @@ triangulo.altura = 8
 print("base: \(triangulo.base)")
 print("altura: \(triangulo.altura)")
 
-// Uso del método sobrecargado área
 print("area() -> \(triangulo.area())")
 print("area(6, 2) -> \(triangulo.area(base: 6, altura: 2))")
 print("area(5.5, 3.2) -> \(triangulo.area(base: 5.5, altura: 3.2))")
